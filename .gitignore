@@ -25,3 +25,6 @@ vite.config.ts.timestamp-*
 
 # Firebase
 .firebase
+
+# NPM
+node_modules
