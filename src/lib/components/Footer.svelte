@@ -30,7 +30,7 @@
                     </li>
                     <li>
                         <a
-                            href="#testimonial"
+                            href="#testimonials"
                             class="text-lg text-gray-400 hover:text-indigo-400 transition duration-300"
                             >Testimonials</a
                         >
