@@ -1,21 +1,38 @@
-# personal-site
+# portfolio-site
 Source code for my personal website, jonathanlynnsmith.com. Showcasing my portfolio, blog, and insights as a Freelance Developer &amp; IT Consultant.
 
-## Creating a project
+## Dependencies
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Node.js
+- The JavaScript runtime needed to run SvelteKit and other project scripts.
+- Recommended version: Node 16.x or higher.
+- To install, download from [nodejs.org](https://nodejs.org/).
+
+### NPM
+- The Node package manager used for installing project dependencies.
+- Comes bundled with Node.js.
+
+### Firebase CLI
+- Firebase command-line interface for managing and deploying the website.
+- Install with npm:
+
+  ```bash
+  npm install -g firebase-tools
+  ```
+
+## Getting Started
+
+### Setup
+
+Install the npm packages from the `package.json`
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
+### Running
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To run the app:
 
 ```bash
 npm run dev
@@ -24,14 +41,44 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
-To create a production version of your app:
+To create a production version of your app, run the following:
+
+
 
 ```bash
 npm run build
+
+# or you can preview the production build with 
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Deploying
+
+To deploy your website to Firebase Hosting:
+
+1. Log in to Firebase: If you haven’t already, log in to your Firebase account by running:
+
+    ```bash
+    firebase login
+    ```
+
+2. Initialize Firebase: In the root of your project, run:
+
+    ```bash
+    firebase init
+    ```
+
+3. This will guide you through the setup process. Make sure to select Firebase Hosting.
+
+
+4. After initializing, you can deploy your site to Firebase Hosting with:
+
+    ```bash
+    firebase deploy
+    ```
+    - This will upload the built app to Firebase and provide you with a URL to access the site.
+    - Configuration for this deployment can be found in the `firebase.json` file.
+
