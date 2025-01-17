@@ -1,3 +1,10 @@
+<script>
+    let expanded = -1;
+    const toggleExpand = (index) => {
+        expanded = expanded === index ? -1 : index;
+    };
+</script>
+
 <div
     id="about"
     class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32"
@@ -48,83 +55,122 @@
                 <div
                     class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
                 >
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">.NET</h4>
-                        <p class="mt-4 text-gray-300">
+                    <!-- .NET -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
+                            .NET
+                        </h4>
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A versatile development framework from Microsoft
                             that I use for building robust, scalable web and
                             desktop applications.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">Python</h4>
-                        <p class="mt-4 text-gray-300">
+
+                    <!-- Python -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">Python</h4>
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A powerful programming language known for its
                             simplicity and versatility. I use Python for data
                             analysis, scripting, and backend development.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">Golang</h4>
-                        <p class="mt-4 text-gray-300">
+
+                    <!-- Golang -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">Golang</h4>
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A modern programming language designed for
                             simplicity and performance. I use Golang to build
                             efficient, high-performance backend systems.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">
+
+                    <!-- Tailwind CSS -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Tailwind CSS
                         </h4>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A utility-first CSS framework that allows me to
                             quickly create fully responsive, highly customizable
                             designs without writing custom CSS.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">Svelte</h4>
-                        <p class="mt-4 text-gray-300">
+
+                    <!-- Svelte -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">Svelte</h4>
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A modern JavaScript framework for building fast,
                             reactive user interfaces. It compiles components
                             into efficient JavaScript code with no runtime
                             overhead.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">Docker</h4>
-                        <p class="mt-4 text-gray-300">
+
+                    <!-- Docker -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">Docker</h4>
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A tool for automating the deployment of applications
                             inside lightweight, portable containers. I use
                             Docker to ensure consistency across environments.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">
+
+                    <!-- Node.JS -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Node.js
                         </h4>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             A JavaScript runtime built on Chrome's V8 engine,
                             allowing me to build scalable server-side
                             applications. I use Node.js for backend development
                             and API creation.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">
+
+                    <!-- Git & GitHub -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Git & GitHub
                         </h4>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             Version control tools that help manage and track
                             changes in code, collaborate with teams, and
                             maintain a robust development workflow.
                         </p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700">
-                        <h4 class="text-xl font-semibold text-white">
+
+                    <!-- AWS & Azure -->
+                    <div
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                    >
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
                             AWS & Azure
                         </h4>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
                             Cloud platforms that I use for deploying scalable
                             applications, managing cloud infrastructure, and
                             automating workflows to optimize operations.

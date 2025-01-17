@@ -1,14 +1,43 @@
-<div class="flex justify-center" style="min-height: calc(100vh - 6rem);">
+<script>
+    import ProfilePic from "$lib/assets/Hero_Profile_Picture.jpg";
+</script>
+<div id="hero" class="flex justify-center items-center w-full flex-col sm:flex-row sm:space-x-8 -mt-10 sm:-mt-12" style="min-height: 100vh;">
+    <!-- Image Section -->
+    <div class="relative z-10 flex-shrink-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-6 sm:mb-0">
+        <img
+            src={ProfilePic}
+            alt="Jonathan Smith"
+            class="rounded-full border-4 border-white shadow-2xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-once="false"
+            data-aos-anchor-placement="bottom-bottom",
 
-    <section class="flex flex-col justify-center text-center w-full">
-        <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            Hi, I'm Jonathan Smith
+            data-aos-mirror="true"
+        />
+    </div>
+    <!-- Text Section -->
+    <div
+        class="z-20 text-center sm:text-left -mt-4 sm:-mt-6"
+        data-aos="fade-up"
+        data-aos-delay="75"
+        data-aos-once="false"
+        data-aos-anchor-placement="bottom-bottom",
+        data-aos-mirror="true"
+    >
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
+            Hi, I'm <span class="animate-gradient">Jonathan Smith</span>
         </h1>
-        <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl">
+        
+        <p class="mt-4 text-lg font-medium text-gray-500 sm:text-xl">
             A Software Developer & IT Consultant
         </p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#contact" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+
+        <div id="cta" class="mt-8 flex items-center justify-center sm:justify-start gap-x-6">
+            <a
+                href="#contact"
+                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
                 Contact me
             </a>
             <a href="#about" class="text-sm font-semibold text-gray-900">
@@ -16,5 +45,27 @@
                 <span aria-hidden="true">→</span>
             </a>
         </div>
-    </section>
+    </div>
 </div>
+
+<style>
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient-animation 3s ease-out infinite;
+        background-image: linear-gradient(to right, #963ccf, #7c7ae9, #00659f);
+        background-clip: text;
+        color: transparent;
+    }
+</style>
