@@ -201,7 +201,7 @@
   </div>
   {:else}
     <div
-      class="mx-auto max-w-xl text-center p-8 bg-indigo-100 text-indigo-900 text-white rounded-lg shadow-lg transform transition-transform duration-300 scale-105"
+      class="mx-auto max-w-xl text-center p-8 bg-indigo-100 text-indigo-900 rounded-lg shadow-lg transform transition-transform duration-300 scale-105"
     >
       <h3 class="text-2xl font-semibold">Thank you!</h3>
       <p class="mt-4 text-lg">

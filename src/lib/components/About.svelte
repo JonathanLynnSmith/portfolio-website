@@ -1,8 +1,56 @@
 <script>
-    let expanded = -1;
-    const toggleExpand = (index) => {
-        expanded = expanded === index ? -1 : index;
-    };
+    import { onMount } from "svelte";
+    import Fa from "svelte-fa";
+    import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
+    let techGrid;
+    let seeMoreText = "See More";
+    let icon = faArrowDown;
+
+    function hideTechCards() {
+        // Hide all tech cards
+        techGrid.querySelectorAll(".hidden-tech-card").forEach((card) => {
+            card.classList.add("hidden");
+        });
+    }
+
+    function toggleTechVisibility() {
+        // Toggle visibility of hidden cards
+        techGrid.querySelectorAll(".hidden, .fadeIn").forEach((card) => {
+            if (card.classList.contains("hidden-tech-card")) {
+                card.classList.toggle("hidden");
+            }
+        });
+
+        // Determine if the grid is expanded
+        const isExpanded =
+            Array.from(techGrid.querySelectorAll(".hidden")).length === 0;
+
+        // Scroll to the top of the "About" section when "Show Less" is clicked
+        if (!isExpanded) {
+
+                techGrid.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
+            
+        } else {
+            const firstHiddenCard = techGrid.querySelector(".hidden-tech-card");
+            firstHiddenCard.scrollIntoView({
+                    behavior: "smooth", // Smooth scrolling
+                    block: "center", // Align the element at the top of the view
+                });
+        }
+
+        // Update button text
+        seeMoreText = isExpanded ? "Show Less" : "See More";
+        icon = isExpanded ? faArrowUp : faArrowDown;
+    }
+
+    onMount(() => {
+        techGrid = document.getElementById("tech-grid");
+        hideTechCards();
+    });
 </script>
 
 <div
@@ -54,10 +102,11 @@
                 </h3>
                 <div
                     class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+                    id="tech-grid"
                 >
-                    <!-- .NET -->
+                    <!-- Top 3 Cards -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
                         <h4 class="text-lg sm:text-xl font-semibold text-white">
                             .NET
@@ -71,50 +120,60 @@
                         </p>
                     </div>
 
-                    <!-- Python -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
-                        <h4 class="text-lg sm:text-xl font-semibold text-white">Python</h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
+                            Python
+                        </h4>
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A powerful programming language known for its
                             simplicity and versatility. I use Python for data
                             analysis, scripting, and backend development.
                         </p>
                     </div>
 
-                    <!-- Golang -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
-                        <h4 class="text-lg sm:text-xl font-semibold text-white">Golang</h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
+                            Golang
+                        </h4>
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A modern programming language designed for
                             simplicity and performance. I use Golang to build
                             efficient, high-performance backend systems.
                         </p>
                     </div>
 
-                    <!-- Tailwind CSS -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
                         <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Tailwind CSS
                         </h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A utility-first CSS framework that allows me to
                             quickly create fully responsive, highly customizable
                             designs without writing custom CSS.
                         </p>
                     </div>
 
-                    <!-- Svelte -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
-                        <h4 class="text-lg sm:text-xl font-semibold text-white">Svelte</h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
+                            Svelte
+                        </h4>
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A modern JavaScript framework for building fast,
                             reactive user interfaces. It compiles components
                             into efficient JavaScript code with no runtime
@@ -122,26 +181,31 @@
                         </p>
                     </div>
 
-                    <!-- Docker -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
-                        <h4 class="text-lg sm:text-xl font-semibold text-white">Docker</h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <h4 class="text-lg sm:text-xl font-semibold text-white">
+                            Docker
+                        </h4>
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A tool for automating the deployment of applications
                             inside lightweight, portable containers. I use
                             Docker to ensure consistency across environments.
                         </p>
                     </div>
 
-                    <!-- Node.JS -->
+                    <!-- Hidden Cards -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="hidden-tech-card hidden fadeIn bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
                         <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Node.js
                         </h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             A JavaScript runtime built on Chrome's V8 engine,
                             allowing me to build scalable server-side
                             applications. I use Node.js for backend development
@@ -149,34 +213,48 @@
                         </p>
                     </div>
 
-                    <!-- Git & GitHub -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="hidden-tech-card hidden fadeIn bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
                         <h4 class="text-lg sm:text-xl font-semibold text-white">
                             Git & GitHub
                         </h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             Version control tools that help manage and track
                             changes in code, collaborate with teams, and
                             maintain a robust development workflow.
                         </p>
                     </div>
 
-                    <!-- AWS & Azure -->
                     <div
-                        class="bg-gray-800 p-4 sm:p-6 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gray-700"
+                        class="hidden-tech-card hidden fadeIn bg-gray-800 p-4 sm:p-6 rounded-lg transition hover:scale-105 hover:shadow-lg hover:bg-gray-700"
                     >
                         <h4 class="text-lg sm:text-xl font-semibold text-white">
                             AWS & Azure
                         </h4>
-                        <p class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300">
+                        <p
+                            class="mt-2 sm:mt-4 text-sm sm:text-base text-gray-300"
+                        >
                             Cloud platforms that I use for deploying scalable
                             applications, managing cloud infrastructure, and
                             automating workflows to optimize operations.
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <!-- See More Button -->
+            <div class="mt-4 text-center">
+                <button
+                    class="text-indigo-500 hover:text-indigo-300 font-semibold text-lg flex items-center justify-center space-x-2 hover:scale-105 transition-transform animate-pulse"
+                    on:click={toggleTechVisibility}
+                >
+                    <!-- Animated arrow icon -->
+                    <Fa {icon} class="w-5 h-5" />
+                    <span>{seeMoreText}</span>
+                </button>
             </div>
 
             <!-- Contact Section -->
@@ -208,3 +286,18 @@
         </div>
     </div>
 </div>
+
+<style>
+    .fadeIn {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fade-in 0.3s forwards;
+    }
+
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>

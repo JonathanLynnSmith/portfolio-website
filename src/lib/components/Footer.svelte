@@ -53,7 +53,7 @@
                     </li>
                     <li>
                         <a
-                            href="https://github.com/JonathanLynnSmith"
+                            href="https://www.linkedin.com/in/jonathanlynnsmith/"
                             target="_blank"
                             class="text-gray-400 hover:text-indigo-400 transition duration-300"
                             >LinkedIn</a
@@ -74,7 +74,7 @@
                     </li>
                     <li>
                         <a
-                            href="mailto:contact@yourdomain.com"
+                            href="mailto:info@jonathanlynnsmith.com"
                             class="text-gray-400 hover:text-indigo-400 transition duration-300"
                             >Email Me</a
                         >

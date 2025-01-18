@@ -9,8 +9,6 @@
     onMount(() => {
         AOS.init({
             easing: "ease-in-out",
-
-
         });
 
     setTimeout(() => {

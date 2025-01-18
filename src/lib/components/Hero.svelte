@@ -1,39 +1,52 @@
 <script>
     import ProfilePic from "$lib/assets/Hero_Profile_Picture.jpg";
 </script>
-<div id="hero" class="flex justify-center items-center w-full flex-col sm:flex-row sm:space-x-8 -mt-10 sm:-mt-12" style="min-height: 100vh;">
-    <!-- Image Section -->
-    <div class="relative z-10 flex-shrink-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-6 sm:mb-0">
+
+<div
+    id="hero"
+    class="flex justify-center items-center w-full flex-col md:flex-row md:space-x-8 pb-[10rem]"
+    style="min-height: 100vh;"
+>
+    <!-- Hero Image  -->
+    <div
+        class="relative z-10 flex-shrink-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-10"
+    >
         <img
+            class="rounded-full border-4 border-white shadow-2xl sm:space-x-8 -mt-5"
             src={ProfilePic}
             alt="Jonathan Smith"
-            class="rounded-full border-4 border-white shadow-2xl"
             data-aos="fade-up"
             data-aos-delay="100"
             data-aos-once="false"
-            data-aos-anchor-placement="bottom-bottom",
-
+            data-aos-anchor-placement="bottom-bottom"
+            ,
             data-aos-mirror="true"
         />
     </div>
-    <!-- Text Section -->
+    <!-- Hero CTA -->
     <div
-        class="z-20 text-center sm:text-left -mt-4 sm:-mt-6"
+        class="z-20 text-center md:text-left -mt-4 sm:-mt-6"
         data-aos="fade-up"
         data-aos-delay="75"
         data-aos-once="false"
-        data-aos-anchor-placement="bottom-bottom",
+        data-aos-anchor-placement="bottom-bottom"
+        ,
         data-aos-mirror="true"
     >
-        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900">
+        <h1
+            class="text-4xl sm:text-5xl font-semibold tracking-tight text-gray-900"
+        >
             Hi, I'm <span class="animate-gradient">Jonathan Smith</span>
         </h1>
-        
+
         <p class="mt-4 text-lg font-medium text-gray-500 sm:text-xl">
             A Software Developer & IT Consultant
         </p>
 
-        <div id="cta" class="mt-8 flex items-center justify-center sm:justify-start gap-x-6">
+        <div
+            id="cta"
+            class="mt-8 flex items-center justify-center md:justify-start gap-x-6"
+        >
             <a
                 href="#contact"
                 class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
