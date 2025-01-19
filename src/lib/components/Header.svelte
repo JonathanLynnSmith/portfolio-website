@@ -15,7 +15,7 @@
     let isScrolled = false;
 
     const handleScroll = () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 0.1) {
             isScrolled = true;
         } else {
             isScrolled = false;
@@ -31,10 +31,10 @@
 </script>
 
 <header
-    class={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"} ${isScrolled ? "py-1 px-4" : "py-6"}`}
+    class={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"} ${isScrolled ? "py-1.5 px-4" : "py-6"}`}
 >
     <nav class="flex items-center justify-between px-6 lg:px-8">
-        <div class="flex lg:flex-1">
+        <div class="flex lg:flex-1 pl-1">
             <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">Jonathan Smith</span>
                 <Fa icon={faCircleNodes} class="text-gray-600 text-2xl" />
