@@ -14,9 +14,7 @@
         >
             <div
                 class="lg:pr-8 lg:pt-4"
-                data-aos="fade-right"
-                data-aos-once="true"
-                data-aos-delay="300"
+
             >
                 <div class="lg:max-w-lg">
                     <h2 class="text-base/7 font-semibold text-indigo-600">
@@ -92,9 +90,7 @@
                 class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                 width="2432"
                 height="1442"
-                data-aos="fade-left"
-                data-aos-once="true"
-                data-aos-delay="500"
+
             />
         </div>
     </div>

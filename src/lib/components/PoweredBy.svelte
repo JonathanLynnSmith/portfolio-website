@@ -11,11 +11,6 @@
 <div id="powered-by" class="py-24 sm:py-32">
     <div
         class="mx-auto max-w-7xl px-6 lg:px-8"
-        data-aos="zoom-out"
-        data-aos-delay="100"
-        data-aos-once="true"
-        data-aos-anchor="#powered-by"
-        data-aos-anchor-placement="top-center"
     >
         <h2
             class="text-center text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl"
@@ -32,11 +27,6 @@
             class="mx-auto mt-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-x-12 gap-y-10"
         >
             <div
-                data-aos="zoom-out"
-                data-aos-delay="100"
-                data-aos-once="true"
-                data-aos-anchor="#powered-by"
-                data-aos-anchor-placement="top-center"
             >
                 <!-- Tailwind CSS Logo -->
                 <a
@@ -63,11 +53,6 @@
             </div>
 
             <div
-                data-aos="zoom-out"
-                data-aos-delay="200"
-                data-aos-once="true"
-                data-aos-anchor="#powered-by"
-                data-aos-anchor-placement="top-center"
             >
                 <!-- Svelte Logo -->
                 <a
@@ -94,11 +79,7 @@
             </div>
 
             <div
-                data-aos="zoom-out"
-                data-aos-delay="300"
-                data-aos-once="true"
-                data-aos-anchor="#powered-by"
-                data-aos-anchor-placement="top-center"
+
             >
                 <!-- Docker Logo -->
                 <a
@@ -125,11 +106,6 @@
             </div>
 
             <div
-                data-aos="zoom-out"
-                data-aos-delay="400"
-                data-aos-once="true"
-                data-aos-anchor="#powered-by"
-                data-aos-anchor-placement="top-center"
             >
                 <!-- EmailJS Logo -->
                 <a

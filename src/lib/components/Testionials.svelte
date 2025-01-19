@@ -15,9 +15,7 @@
     ></div>
     <div 
         class="mx-auto max-w-2xl lg:max-w-4xl" 
-        data-aos="zoom-out"
-        data-aos-once="true"
-        data-aos-delay="300"
+
         >
         <div class="flex flex-row items-center justify-center h-full space-x-4">
             <Fa icon={faCheckSquare} size="3x" class="text-indigo-600" />
