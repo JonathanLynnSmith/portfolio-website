@@ -2,7 +2,7 @@
     import TailWindLogo from "$lib/assets/Tailwind_Logo.png";
     import SvelteLogo from "$lib/assets/Svelte_Logo.png";
     import DockerLogo from "$lib/assets/Docker_Logo.png";
-    import EmailJSLogo from "$lib/assets/EmailJS_logo.png";
+    import EmailJSLogo from "$lib/assets/EmailJS_Logo.png";
 
     import { Fa } from "svelte-fa";
     import { faDocker } from "@fortawesome/free-brands-svg-icons";
