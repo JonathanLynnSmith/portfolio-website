@@ -4,7 +4,7 @@
 
 <div
     id="hero"
-    class="flex justify-center items-center w-full flex-col md:flex-row md:space-x-8 pb-[10rem]"
+    class="flex justify-center items-center w-full flex-col md:flex-row md:space-x-8 md:pb-[5rem] pb-[10rem]"
     style="min-height: 100vh;"
 >
     <!-- Hero Image  -->
@@ -12,7 +12,7 @@
         class="relative z-10 flex-shrink-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-10"
     >
         <img
-            class="rounded-full border-4 border-white shadow-2xl sm:space-x-8 -mt-5"
+            class="rounded-full border-4 border-white shadow-2xl sm:space-x-8 "
             src={ProfilePic}
             alt="Jonathan Smith"
             data-aos="fade-up"
@@ -25,7 +25,7 @@
     </div>
     <!-- Hero CTA -->
     <div
-        class="z-20 text-center md:text-left -mt-4 sm:-mt-6"
+        class="z-20 text-center md:text-left -mt-2 sm:-mt-6"
         data-aos="fade-up"
         data-aos-delay="75"
         data-aos-once="false"
