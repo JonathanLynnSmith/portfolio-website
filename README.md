@@ -59,22 +59,34 @@ npm run preview
 
 To deploy your website to Firebase Hosting:
 
-1. Log in to Firebase: If you haven’t already, log in to your Firebase account by running:
+1. Install Firebase via `npm`
+
+    ```bash
+    npm install -g firebase-tools
+    ```
+
+2. Enable Firebase Experimental Hosting
+
+    ```bash
+    firebase experiments:enable webframeworks
+    ```
+
+3. Log in to Firebase: If you haven’t already, log in to your Firebase account by running:
 
     ```bash
     firebase login
     ```
 
-2. Initialize Firebase: In the root of your project, run:
+4. Initialize Firebase: In the root of your project, run:
 
     ```bash
     firebase init
     ```
 
-3. This will guide you through the setup process. Make sure to select Firebase Hosting.
+5. This will guide you through the setup process. Make sure to select Firebase Hosting.
 
 
-4. After initializing, you can deploy your site to Firebase Hosting with:
+6. After initializing, you can deploy your site to Firebase Hosting with:
 
     ```bash
     firebase deploy
