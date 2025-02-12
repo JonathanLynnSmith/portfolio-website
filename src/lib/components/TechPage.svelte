@@ -43,10 +43,6 @@
           desc: "A runtime environment for executing JavaScript on the server-side, enabling scalable, real-time web applications through its non-blocking I/O model.",
         },
         {
-          name: "React",
-          desc: "A declarative JavaScript library for building user interfaces, focusing on efficient component-based rendering with a virtual DOM.",
-        },
-        {
           name: "Angular",
           desc: "A full-featured, client-side framework developed by Google for building dynamic, single-page web applications using TypeScript. Provides two-way data binding, a powerful templating engine, and dependency injection.",
         },
@@ -76,10 +72,6 @@
           desc: "An open-source IaC tool that allows developers to define and manage cloud infrastructure using configuration files, enabling repeatable and automated infrastructure provisioning.",
         },
         {
-          name: "Jenkins",
-          desc: "An open-source automation server used for continuous integration and continuous delivery (CI/CD). It automates the process of building, testing, and deploying software.",
-        },
-        {
           name: "Azure DevOps",
           desc: "A suite of Microsoft tools for DevOps, offering services like version control, CI/CD pipelines, project management, and collaboration for application development and deployment.",
         },
@@ -93,24 +85,24 @@
       category: "Cloud",
       techs: [
         {
-          name: "AWS & Azure",
-          desc: "Cloud platforms offering on-demand compute power, storage, and other cloud services. AWS is Amazon’s cloud platform, while Azure is Microsoft’s.",
+          name: "AWS",
+          desc: "Amazon's cloud platforms offering on-demand compute power, storage, and other cloud services.",
+        },
+        {
+          name: "Azure",
+          desc: "Microsoft’s cloud platform offering a range of services including virtual machines, databases, networking, and machine learning for building, testing, and deploying applications.",
         },
         {
           name: "Google Cloud",
           desc: "Google’s cloud computing platform that provides a wide range of services including compute, storage, AI, and machine learning capabilities.",
         },
         {
-          name: "Docker Swarm",
-          desc: "A native clustering and orchestration tool for Docker containers, enabling multi-host deployments, scaling, and management of containerized applications.",
-        },
-        {
           name: "Firebase",
           desc: "A comprehensive platform for building mobile and web applications, providing services like real-time databases, authentication, cloud functions, and analytics.",
         },
         {
-          name: "Azure",
-          desc: "Microsoft’s cloud platform offering a range of services including virtual machines, databases, networking, and machine learning for building, testing, and deploying applications.",
+          name: "Docker Swarm",
+          desc: "A native clustering and orchestration tool for Docker containers, enabling multi-host deployments, scaling, and management of containerized applications.",
         },
       ],
     },
