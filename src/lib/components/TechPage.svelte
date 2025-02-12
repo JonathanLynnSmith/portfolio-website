@@ -138,10 +138,10 @@
       <div class="flex items-center justify-center space-x-4">
         <button
           type="button"
-          class="flex items-center justify-center space-x-2 px-4 py-2 text-sm font-semibold text-indigo-400 border border-indigo-400 hover:border-indigo-300 hover:bg-indigo-600 hover:text-gray-100 hover:scale-105 rounded-md transition duration-300 ease-in-out"
+          class="flex flex-row min-w-[8rem] items-center justify-center py-2 text-sm font-semibold text-indigo-400 border border-indigo-400 hover:border-indigo-300 hover:bg-indigo-600 hover:text-gray-100 hover:scale-105 rounded-md transition duration-300 ease-in-out"
           onclick={() => window.history.back()}
         >
-          <Fa icon={faArrowLeft} class="w-5 h-5" />
+          <Fa icon={faArrowLeft} class="w-5 h5 pr-2" />
           Go Back
         </button>
         <input
