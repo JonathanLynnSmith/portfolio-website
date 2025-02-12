@@ -7,7 +7,10 @@ const config = {
 		adapter: adapter({
 			// Specify the output directory (default is "build")
 			out: 'build', 
-		})
+		}),
+		prerender: {
+			handleMissingId: 'warn'
+		},
 	},
 	preprocess: vitePreprocess()
 };
