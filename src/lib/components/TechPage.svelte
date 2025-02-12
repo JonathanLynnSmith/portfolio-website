@@ -1,7 +1,7 @@
 <script>
   import {writable} from "svelte/store";
   import TechCard from "$lib/components/TechCard.svelte";
-  import {faArrowUp, faArrowLeft} from "@fortawesome/free-solid-svg-icons";
+  import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
 
   // Define the tech sections as a writable store.
@@ -133,17 +133,6 @@
 <main
   class="min-h-screen py-12 bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 bg-[length:400%_400%]"
 >
-  <button
-    type="button"
-    class="p-4 m-2 fixed bottom-0 right-0 bg-gray-800 border border-indigo-500 rounded-full shadow-lg text-indigo-500 hover:text-indigo-300 font-semibold text-lg flex items-center justify-center space-x-2 hover:scale-105 transition-transform animate-pulse z-10"
-    onclick={() => {
-      // Scroll to the top of the page
-      document.documentElement.scrollTop = 0;
-    }}
-  >
-    <Fa icon={faArrowUp} class="w-5 h-5" />
-  </button>
-
   <div class="relative container mx-auto px-4">
     <!-- Header Section -->
     <header class="mb-12 text-center">
@@ -182,11 +171,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {#each section.techs as tech (tech.name)}
               <!-- Updated card colors: dark background with indigo hover accent -->
-              <TechCard
-                {tech}
-                bgColor="bg-gray-800"
-                bgHoverColor="bg-indigo-600"
-              />
+              <TechCard {tech} />
             {/each}
           </div>
         </div>
