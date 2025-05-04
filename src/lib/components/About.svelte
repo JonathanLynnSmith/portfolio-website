@@ -1,9 +1,5 @@
-<script>
-  import {onMount} from "svelte";
-  import Fa from "svelte-fa";
-  import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
-  import TechCard from "$lib/components/TechCard.svelte";
-  import {goto} from "$app/navigation";
+<script lang="ts">
+  import { techData } from "$lib/components/TechData";
 </script>
 
 <div
@@ -45,63 +41,8 @@
         </div>
       </div>
 
-      <!-- Technologies I Work With Section -->
-      <div class="mt-16">
-        <h3 class="text-2xl font-semibold text-white">
-          Some Of The Technologies I Work With
-        </h3>
-        <div
-          id="tech-grid"
-          class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <!-- Programming Languages -->
-          <div class="col-span-full text-lg font-semibold text-gray-400">
-            Programming Languages
-          </div>
-          {#each [{name: ".NET", desc: "Microsoft's versatile development framework for web and desktop applications."}, {name: "Python", desc: "A powerful language for data analysis, scripting, and backend development."}, {name: "Golang", desc: "A modern language for building high-performance backend systems."}] as tech}
-            <TechCard {tech} />
-          {/each}
-
-          <!-- Frameworks & Libraries -->
-          <div class="col-span-full text-lg font-semibold text-gray-400">
-            Frameworks & Libraries
-          </div>
-          {#each [{name: "Svelte", desc: "A fast JavaScript framework for reactive UI development."}, {name: "Tailwind CSS", desc: "A utility-first CSS framework for responsive, customizable designs."}, {name: "Node.js", desc: "A runtime for building scalable server-side applications."}] as tech}
-            <TechCard {tech} />
-          {/each}
-
-          <!-- Tools & DevOps -->
-          <div class="col-span-full text-lg font-semibold text-gray-400">
-            Tools & DevOps
-          </div>
-          {#each [{name: "Docker", desc: "A tool for containerizing applications for consistency across environments."}, {name: "Git & GitHub", desc: "Version control and collaboration tools for software development."}] as tech}
-            <TechCard {tech} />
-          {/each}
-
-          <!-- Cloud Services -->
-          <div class="col-span-full text-lg font-semibold text-gray-400">
-            Cloud Services
-          </div>
-          {#each [{name: "AWS & Azure", desc: "Cloud platforms for deploying scalable applications."}] as tech}
-            <TechCard {tech} />
-          {/each}
-        </div>
-      </div>
-
-      <!-- See More Button -->
-      <div class="mt-4 text-center">
-        <button
-          class="mt-10 text-indigo-500 border px-4 py-2 hover:bg-indigo-600 hover:text-gray-100 border-indigo-500 hover:border-indigo-300 rounded-full shadow-lg font-semibold text-lg flex items-center justify-center space-x-2 hover:scale-105 transition-transform animate-pulse"
-          on:click={() => goto("/tech")}
-        >
-          <!-- Animated arrow icon -->
-          <span>See More</span>
-          <Fa icon={faArrowRight} class="w-5 h-5" />
-        </button>
-      </div>
-
       <!-- Contact Section -->
-      <div class="mt-16">
+      <div class="mt-8">
         <h3 class="text-2xl font-semibold text-white">Let's Connect</h3>
         <p class="mt-2 text-gray-300">
           I would love to hear from you! Whether you need help with a project or
