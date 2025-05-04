@@ -1,118 +1,16 @@
 <script>
-  import {writable} from "svelte/store";
+  import { writable } from "svelte/store";
   import TechCard from "$lib/components/TechCard.svelte";
-  import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
+  import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
-
-  // Define the tech sections as a writable store.
-  const techSections = writable([
-    {
-      category: "Languages",
-      techs: [
-        {
-          name: ".NET",
-          desc: "Versatile framework for web and desktop applications, primarily using C# and VB.NET. Supports cross-platform development with .NET Core.",
-        },
-        {
-          name: "Python",
-          desc: "Dynamic, high-level programming language known for its simplicity and readability. Commonly used in data science, web development, automation, and AI.",
-        },
-        {
-          name: "Golang",
-          desc: "A statically typed, compiled language designed at Google for simplicity and concurrency, ideal for building scalable systems and microservices.",
-        },
-        {
-          name: "JavaScript",
-          desc: "A high-level, interpreted language that is the backbone of web development, enabling interactive web pages and is used both on the client-side and server-side.",
-        },
-      ],
-    },
-    {
-      category: "Frameworks",
-      techs: [
-        {
-          name: "Svelte",
-          desc: "A lightweight, front-end framework that shifts much of the work to compile time, enabling faster, smaller applications with minimal boilerplate.",
-        },
-        {
-          name: "Tailwind CSS",
-          desc: "A utility-first CSS framework that provides low-level utility classes to build custom designs without writing custom CSS.",
-        },
-        {
-          name: "Node.js",
-          desc: "A runtime environment for executing JavaScript on the server-side, enabling scalable, real-time web applications through its non-blocking I/O model.",
-        },
-        {
-          name: "Angular",
-          desc: "A full-featured, client-side framework developed by Google for building dynamic, single-page web applications using TypeScript. Provides two-way data binding, a powerful templating engine, and dependency injection.",
-        },
-        {
-          name: "ASP.NET",
-          desc: "A web framework from Microsoft for building dynamic web applications, APIs, and services. It uses .NET Core for cross-platform development and supports MVC and Web API patterns.",
-        },
-      ],
-    },
-    {
-      category: "DevOps & Tools",
-      techs: [
-        {
-          name: "Docker",
-          desc: "A platform for developing, shipping, and running applications inside containers, ensuring consistency across different environments from development to production.",
-        },
-        {
-          name: "Git & GitHub",
-          desc: "Git is a distributed version control system for tracking changes in code. GitHub provides cloud-hosted repositories for collaboration, version control, and project management.",
-        },
-        {
-          name: "Kubernetes",
-          desc: "An open-source platform for automating the deployment, scaling, and management of containerized applications, providing orchestration for Docker containers across clusters.",
-        },
-        {
-          name: "Terraform",
-          desc: "An open-source IaC tool that allows developers to define and manage cloud infrastructure using configuration files, enabling repeatable and automated infrastructure provisioning.",
-        },
-        {
-          name: "Azure DevOps",
-          desc: "A suite of Microsoft tools for DevOps, offering services like version control, CI/CD pipelines, project management, and collaboration for application development and deployment.",
-        },
-        {
-          name: "PowerShell",
-          desc: "A command-line shell and scripting language from Microsoft, used for automating system administration tasks and managing configuration and deployment in Windows environments.",
-        },
-      ],
-    },
-    {
-      category: "Cloud",
-      techs: [
-        {
-          name: "AWS",
-          desc: "Amazon's cloud platforms offering on-demand compute power, storage, and other cloud services.",
-        },
-        {
-          name: "Azure",
-          desc: "Microsoft’s cloud platform offering a range of services including virtual machines, databases, networking, and machine learning for building, testing, and deploying applications.",
-        },
-        {
-          name: "Google Cloud",
-          desc: "Google’s cloud computing platform that provides a wide range of services including compute, storage, AI, and machine learning capabilities.",
-        },
-        {
-          name: "Firebase",
-          desc: "A comprehensive platform for building mobile and web applications, providing services like real-time databases, authentication, cloud functions, and analytics.",
-        },
-        {
-          name: "Docker Swarm",
-          desc: "A native clustering and orchestration tool for Docker containers, enabling multi-host deployments, scaling, and management of containerized applications.",
-        },
-      ],
-    },
-  ]);
+  import { techData } from "$lib/components/TechData";
+  const openCard = writable(null);
 
   // Local search query variable.
   let searchQuery = "";
 
   // Reactive statement to filter sections whenever the store or searchQuery changes.
-  $: filteredSections = $techSections
+  $: filteredSections = $techData
     .map((section) => ({
       ...section,
       techs: section.techs.filter((tech) =>
@@ -163,7 +61,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {#each section.techs as tech (tech.name)}
               <!-- Updated card colors: dark background with indigo hover accent -->
-              <TechCard {tech} />
+              <TechCard {tech} {openCard} />
             {/each}
           </div>
         </div>
