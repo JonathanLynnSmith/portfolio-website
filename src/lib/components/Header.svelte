@@ -82,7 +82,7 @@
         >Services</a
       >
       <a
-        href="/tech"
+        href="/#technologies"
         class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
         >Technologies</a
       >
@@ -156,22 +156,22 @@
               on:click={toggleNav}>Home</a
             >
             <a
-              href="#about"
+              href="/#about"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>About</a
             >
             <a
-              href="#services"
+              href="/#services"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>Services</a
             >
             <a
-              href="/tech"
+              href="/#technologies"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>Technologies</a
             >
             <a
-              href="#contact"
+              href="/#contact"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>Contact</a
             >

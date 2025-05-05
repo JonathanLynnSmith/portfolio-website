@@ -36,6 +36,7 @@ export const techData = writable([
           name: "Svelte",
           startYear: 2023,
           desc: "A lightweight, front-end framework that shifts much of the work to compile time, enabling faster, smaller applications with minimal boilerplate.",
+          showOnHomepage: true,
         },
         {
           name: "Tailwind CSS",
@@ -51,6 +52,7 @@ export const techData = writable([
           name: "Angular",
           startYear: 2021,
           desc: "A full-featured, client-side framework developed by Google for building dynamic, single-page web applications using TypeScript. Provides two-way data binding, a powerful templating engine, and dependency injection.",
+          showOnHomepage: true,
         },
         {
           name: "ASP.NET",
