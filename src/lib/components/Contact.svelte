@@ -3,7 +3,12 @@
   import emailjs from "@emailjs/browser";
 
   let form;
-  let requiredFields = ["from_first_name", "from_last_name", "reply_to", "message"];
+  let requiredFields = [
+    "from_first_name",
+    "from_last_name",
+    "reply_to",
+    "message",
+  ];
   let isFormError = false;
   let isFormValid = true;
   let isFormSubmitted = false;
@@ -34,9 +39,14 @@
 
   async function sendEmail(event) {
     try {
-      await emailjs.sendForm("service_0tzk3tg", "template_zh1qxqb", event.target, {
-        publicKey: "cWwhATzFW9QmwlP27",
-      });
+      await emailjs.sendForm(
+        "service_0tzk3tg",
+        "template_zh1qxqb",
+        event.target,
+        {
+          publicKey: "cWwhATzFW9QmwlP27",
+        }
+      );
       console.log("Email sent successfully!");
       return true;
     } catch (error) {
@@ -66,7 +76,9 @@
   }
 
   function addFromSourceField(event) {
-    let fromSourceField = event.target.querySelector("input[name='from_source']");
+    let fromSourceField = event.target.querySelector(
+      "input[name='from_source']"
+    );
     if (!fromSourceField) {
       fromSourceField = document.createElement("input");
       fromSourceField.setAttribute("type", "hidden");
@@ -76,7 +88,6 @@
     fromSourceField.value = "Portfolio-Website";
   }
 </script>
-
 
 <div
   id="contact"
@@ -109,7 +120,7 @@
               type="text"
               name="from_first_name"
               id="first-name"
-              placeholder="John"
+              placeholder="Jonathan"
               class="block w-full rounded-md border-2 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
@@ -124,7 +135,7 @@
               type="text"
               name="from_last_name"
               id="last-name"
-              placeholder="Doe"
+              placeholder="Smith"
               class="block w-full rounded-md border-2 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
@@ -138,7 +149,7 @@
               type="email"
               name="reply_to"
               id="email"
-              placeholder="Doe@example.com"
+              placeholder="JonathanSmith@gmail.com"
               class="block w-full rounded-md border-2 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
@@ -191,14 +202,14 @@
       </div>
     </form>
   {:else if isEmailError}
-  <div
-    class="mx-auto max-w-xl text-center p-8 bg-red-100 text-red-800 border border-red-300 rounded-lg shadow-lg transform transition-transform duration-300 scale-105"
-  >
-    <h3 class="text-2xl font-semibold">Oops!</h3>
-    <p class="mt-4 text-lg">
-      There was an error sending your message. Please try again later.
-    </p>
-  </div>
+    <div
+      class="mx-auto max-w-xl text-center p-8 bg-red-100 text-red-800 border border-red-300 rounded-lg shadow-lg transform transition-transform duration-300 scale-105"
+    >
+      <h3 class="text-2xl font-semibold">Oops!</h3>
+      <p class="mt-4 text-lg">
+        There was an error sending your message. Please try again later.
+      </p>
+    </div>
   {:else}
     <div
       class="mx-auto max-w-xl text-center p-8 bg-indigo-100 text-indigo-900 rounded-lg shadow-lg transform transition-transform duration-300 scale-105"
