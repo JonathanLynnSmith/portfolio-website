@@ -18,7 +18,7 @@
   }
 </script>
 
-<section id="tech-section" class="relative py-16">
+<section id="technologies" class="relative py-16">
   <div class="container mx-auto px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-12">
