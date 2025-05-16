@@ -3,7 +3,7 @@
   import Contact from '$lib/components/Contact.svelte';
 
   const steps = [
-    'Base Package',
+    'Base ',
     'Enhancements',
     'Hosting',
     'Special Offer'
@@ -121,7 +121,7 @@
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
             1. Pick Base Package
           </h3>
-          <div class="grid grid-flow-col auto-cols-fr gap-6 gap-6 items-centered justify-around">
+        <div class="grid gap-6 grid-flow-row auto-rows-auto sm:grid-flow-col sm:auto-cols-fr">
             {#each websitePackages as pkg}
               <div class="flex flex-col justify-around p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg text-center hover:shadow-indigo-400 transition-shadow">
                 <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -150,8 +150,8 @@
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
             2. Add Enhancements
           </h3>
-          <div class="grid grid-flow-col auto-cols-fr gap-6">
-            {#each addOns as addon}
+<div class="grid gap-6 grid-flow-row auto-rows-auto sm:grid-flow-col sm:auto-cols-fr">
+              {#each addOns as addon}
               <div class="flex flex-col items-centered justify-between p-5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-indigo-400 transition-shadow text-center">
                 <h5 class="font-semibold text-gray-900 dark:text-white mb-3">
                   {addon.name}
@@ -169,8 +169,8 @@
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
             3. Choose Hosting & Maintenance
           </h3>
-          <div class="grid grid-flow-col auto-cols-fr gap-6">
-            {#each hostingPackages as host}
+<div class="grid gap-6 grid-flow-row auto-rows-auto sm:grid-flow-col sm:auto-cols-fr">
+              {#each hostingPackages as host}
               <div class="p-8 flex flex-col items-centered justify-between bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg text-center hover:shadow-indigo-400 transition-shadow">
                 <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {host.tier}

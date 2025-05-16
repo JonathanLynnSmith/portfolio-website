@@ -92,12 +92,12 @@
         class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
         >Pricing</a
       >
-
+<!-- 
       <a
         href="/#contact"
         class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
         >Contact</a
-      >
+      > -->
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
       <!-- GitHub Icon with increased size -->
@@ -179,11 +179,10 @@
             >
 
             <a
-              href="/#pricing"
+              href="/pricing/#pricing"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>Pricing</a
             >
-
             <a
               href="/#contact"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
