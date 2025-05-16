@@ -91,7 +91,7 @@
 
 <div
   id="contact"
-  class="relative isolate overflow-hidden py-24 sm:py-32"
+  class="relative isolate overflow-hidden pt-10 pb-24 sm:pb-32"
 >
   {#if !isFormSubmitted}
     <div class="mx-auto max-w-2xl text-center">
