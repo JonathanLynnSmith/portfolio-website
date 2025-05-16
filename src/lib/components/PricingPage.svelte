@@ -68,6 +68,13 @@
   function scrollTo(i) {
     sectionEls[i]?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  function scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
 </script>
 
 <section class="bg-white dark:bg-gray-900 min-h-screen">
@@ -256,7 +263,6 @@
         <a
           href="#contact"
           class="inline-block px-6 py-2 my-6 max-w-50 mx-auto bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-900 transition text-sm"
-          on:click|preventDefault={() => scrollTo(3)}
         >
           Get Started Now ➔
         </a>
