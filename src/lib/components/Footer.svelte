@@ -1,4 +1,14 @@
-<footer class="bg-gray-900 text-white py-12">
+<script>
+  import Contact from "$lib/components/Contact.svelte";
+</script>
+
+
+
+
+<footer class="bg-gradient-to-b from-gray-900 from-10% to-gray-700 to-90% text-white py-12">
+  
+      <slot></slot>
+  
   <div class="max-w-screen-xl mx-auto px-6">
     <!-- Footer navigation links -->
     <div

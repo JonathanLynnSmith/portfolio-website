@@ -91,7 +91,7 @@
 
 <div
   id="contact"
-  class="isolate bg-gradient-to-b from-gray-700 from-10% to-gray-900 to-90% px-6 py-24 sm:py-34 lg:px-8"
+  class="relative isolate overflow-hidden py-24 sm:py-32"
 >
   {#if !isFormSubmitted}
     <div class="mx-auto max-w-2xl text-center">

@@ -5,6 +5,7 @@
     import "../app.css";
     import Header from "$lib/components/Header.svelte";
     import Footer from '$lib/components/Footer.svelte';
+    import Contact from '$lib/components/Contact.svelte';
 
     onMount(() => {
         AOS.init({
@@ -24,5 +25,7 @@
     <slot />
   </main>
   
-  <Footer />
+  <Footer >
+      <Contact />
+  </Footer>
 </div>

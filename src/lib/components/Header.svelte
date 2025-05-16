@@ -82,10 +82,17 @@
         >Services</a
       >
       <a
-        href="/#technologies"
+        href="/tech"
         class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
         >Technologies</a
       >
+
+      <a
+        href="/pricing/#pricing"
+        class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
+        >Pricing</a
+      >
+
       <a
         href="/#contact"
         class="text-sm font-semibold text-gray-900 hover:text-indigo-600"
@@ -166,10 +173,17 @@
               on:click={toggleNav}>Services</a
             >
             <a
-              href="/#technologies"
+              href="/tech"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
               on:click={toggleNav}>Technologies</a
             >
+
+            <a
+              href="/#pricing"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+              on:click={toggleNav}>Pricing</a
+            >
+
             <a
               href="/#contact"
               class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"

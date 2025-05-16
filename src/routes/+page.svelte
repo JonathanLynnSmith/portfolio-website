@@ -15,5 +15,4 @@
   <TechSection />
   <!-- <Testionials /> -->
   <PoweredBy />
-  <Contact />
 </div>
