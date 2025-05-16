@@ -21,7 +21,7 @@
 </script>
 
 <main
-  class="min-h-screen py-12 bg-gradient-to-r from-gray-900 via-indigo-900 to-gray-900 bg-[length:400%_400%]"
+  class="min-h-screen py-12 bg-white dark:bg-gray-900"
 >
   <div class="relative container mx-auto px-4">
     <!-- Header Section -->
@@ -46,7 +46,7 @@
           type="text"
           placeholder="Search technologies..."
           bind:value={searchQuery}
-          class="w-full max-w-md px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:border-indigo-400"
+          class="w-full max-w-md px-4 py-2 rounded-lg border border-gray-700 bg-white dark:bg-gray-800 text-gray-100 focus:outline-none focus:border-indigo-400"
         />
       </div>
     </header>
