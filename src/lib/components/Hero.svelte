@@ -1,5 +1,5 @@
 <script>
-  import ProfilePic from "$lib/assets/Hero_Profile_Picture.png";
+  import ProfilePic from "$lib/assets/Hero_Profile_Picture.webp";
 </script>
 
 <div
